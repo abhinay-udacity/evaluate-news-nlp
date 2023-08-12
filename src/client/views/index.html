@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sentiment Analyzer</title>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Logo
+            </div>
+            <div class="">
+                navigation
+            </div>
+            <h2>This is a sentiment analyzer that accepts a URL and then analyzes the sentiment of the article that the URL points to.</h2>
+        </header>
+
+        <main>
+            <section>
+                <form class="" id="mainForm" >
+                    <input id="inputContent" type="text" name="input" value="" placeholder="Name">
+                    <button type="submit" name="submit" value="submit">Submit URL</button>
+                </form>
+            </section>
+
+            <section id="senti_result_form">
+                <strong>Form Results:</strong>
+                <div id="results"></div>
+                <p id="polarity">Polarity:</p>
+                <p id="confidence">Confidence:</p>
+                <p id="subjectivity">Subjectivity:</p>
+                <p id="text">Article Snippet:</p>
+                </div>
+            </section>
+        </main>
+        
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            
+            if ('serviceWorker' in navigator) {
+                
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
