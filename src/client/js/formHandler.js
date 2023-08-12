@@ -14,10 +14,10 @@ async function handleSubmit(event) {
         console.log("here too!")
         let res = await  response.json()
         console.log(JSON.stringify(res))
-        document.getElementById("polarity").innerHTML = "Polarity"+res.score_tag;
-        document.getElementById("confidence").innerHTML = "Confidence"+res.confidence;
-        document.getElementById("subjectivity").innerHTML = "Subjectivity"+res.subjectivity; 
-        document.getElementById("text").innerHTML = "Snippet of text"+res.sentence_list[0].text;          
+        document.getElementById("polarity").innerHTML = "Polarity=>"+res.score_tag;
+        document.getElementById("confidence").innerHTML = "Confidence=>"+res.confidence;
+        document.getElementById("subjectivity").innerHTML = "Subjectivity=>"+res.subjectivity; 
+        document.getElementById("text").innerHTML = "Snippet of text=>"+res.sentence_list[0].text;          
 
 
             
